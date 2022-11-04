@@ -1,2 +1,155 @@
 @use '../util/' as u;
 
+main {
+  padding: u.rem(76) u.rem(18);
+  text-align: center;
+  align-content: center;
+
+  @include u.breakpoint-down(desktop) {
+    max-width: u.rem(1000);
+    margin: auto;
+  }
+
+  @include u.breakpoint-up(desktop) {
+    display: grid;
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows: 1fr 1fr;
+    padding: u.rem(120) u.rem(180);
+    height: 100vh;
+  }
+
+  header {
+    margin-bottom: u.rem(30);
+
+    @include u.breakpoint-up(desktop) {
+      text-align: left;
+    }
+
+    h1 {
+      color: u.$very-dark-magenta;
+      font-size: u.rem(40);
+      font-weight: 700;
+      line-height: 0.8;
+      margin-bottom: u.rem(26);
+      max-width: u.rem(420);
+      display: inline-block;
+
+      @include u.breakpoint-up(desktop) {
+        font-size: u.rem(61);
+      }
+    }
+
+    p {
+      color: u.$dark-grayish-magenta;
+      font-weight: 500;
+      font-size: u.rem(18);
+      line-height: 1.2;
+
+      @include u.breakpoint-up(desktop) {
+        width: 80%;
+      }
+    }
+  }
+
+  .rating-section {
+    margin-bottom: u.rem(50);
+
+    &__container {
+      background-color: u.$light-grayish-magenta;
+      padding: u.rem(16) 0;
+      border-radius: u.rem(8);
+      
+      @include u.breakpoint-up(desktop) {
+        display: flex;
+        align-items: center;
+        padding-left: u.rem(28);
+      }
+
+      &:not(:last-child) {
+        margin-bottom: u.rem(16);
+      }
+    }
+
+    &__stars {
+      margin-right: u.rem(24);
+
+      @include u.breakpoint-down(desktop) {
+        margin-bottom: u.rem(16);
+        margin-right: 0;
+      }
+
+      img:not(:last-child) {
+        padding-right: u.rem(4);
+      }
+    }
+
+    p {
+      font-size: u.rem(18);
+      font-weight: 700;
+      color: u.$very-dark-magenta;
+    }
+  }
+
+  .reviews-section {
+    text-align: left;
+
+    @include u.breakpoint-up(desktop){
+      grid-column: span 2;
+      display: flex;
+      align-items: center;
+    }
+
+    &__container {
+      background-color: u.$very-dark-magenta;
+      padding: u.rem(32);
+      border-radius: u.rem(8);
+
+      @include u.breakpoint-up(desktop) {
+        height: fit-content;
+
+        &:not(:last-child) {
+          margin-right: u.rem(30);
+        }
+      }
+
+      @include u.breakpoint-down(desktop) {
+        &:not(:last-child) {
+          margin-bottom: u.rem(16);
+        }
+      }
+    }
+
+    &__header {
+      display: flex;
+      align-items: center;
+      margin-bottom: u.rem(26);
+    }
+
+    &__profileimg {
+      width: u.rem(40);
+      border-radius: u.rem(20);
+      margin-right: u.rem(22);
+    }
+
+    &__person {
+      display: inline-block;
+      font-size: u.rem(16);
+
+      .name {
+        color: white;
+        font-weight: 500;
+        margin-bottom: u.rem(4);
+      }
+
+      .tag {
+        color: u.$soft-pink;
+      }
+    }
+
+    &__text {
+      color: white;
+      font-size: u.rem(16);
+      line-height: 1.4;
+    }
+  }
+}

@@ -12,6 +12,77 @@ html {
 body {
   margin: 0;
   padding: 0;
+  font-family: u.$league-spartan-font;
+  font-size: u.rem(15);
+  background-image: url(/images/bg-pattern-top-mobile.svg), url(/images/bg-pattern-bottom-mobile.svg);
+  background-position: left top, right bottom;
+  background-repeat: no-repeat;
+  background-size: auto, contain;
+
+  @include u.breakpoint-up(medium) {
+    background-size: auto, cover;
+  }
+
+  @include u.breakpoint-up(large) {
+    background-image: url(/images/bg-pattern-top-desktop.svg), url(/images/bg-pattern-bottom-desktop.svg);
+    background-size: auto, contain;
+  }
+}
+
+.margin-left {
+  margin-left: u.rem(50);
+
+  @include u.breakpoint-down(desktop) {
+    margin: 0;
+  }
+
+  &__big {
+    margin-left: u.rem(100);
+
+    @include u.breakpoint-down(desktop) {
+      margin: 0;
+    }
+  }
+}
+
+.margin-right {
+  margin-right: u.rem(50);
+
+  @include u.breakpoint-down(desktop) {
+    margin: 0;
+  }
+
+  &__big {
+    margin-right: u.rem(100);
+
+    @include u.breakpoint-down(desktop) {
+      margin: 0;
+    }
+  }
+}
+
+.margin-top {
+  margin-top: u.rem(30);
+
+  @include u.breakpoint-down(desktop) {
+    margin: 0;
+  }
+
+  &__big {
+    margin-top: u.rem(60);
+
+    @include u.breakpoint-down(desktop) {
+      margin: 0;
+    }
+  }
+}
+
+.zoom-hover {
+  transition: transform 150ms ease-in-out;
+}
+
+.zoom-hover:hover {
+  transform: scale(1.03);
 }
 
 .sr-only {
