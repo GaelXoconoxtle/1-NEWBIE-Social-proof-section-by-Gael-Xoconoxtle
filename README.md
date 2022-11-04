@@ -24,12 +24,12 @@ Users should be able to:
 
 ### Screenshot
 
-![](./screenshot.jpg)
+![](/screenshot.jpeg)
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://your-solution-url.com)
-- Live Site URL: [Add live site URL here](https://your-live-site-url.com)
+- Solution URL: [https://www.frontendmentor.io/solutions/social-proof-section-by-gael-xoconoxtle-mjNqsqoH0h](https://www.frontendmentor.io/solutions/social-proof-section-by-gael-xoconoxtle-mjNqsqoH0h)
+- Live Site URL: [https://1-social-proof-section-by-gaelxoconox.netlify.app/](https://1-social-proof-section-by-gaelxoconox.netlify.app/)
 
 ## My process
 
@@ -48,7 +48,7 @@ This was a bit hard at the start but i feel more comfortable working with html a
 
 ### Continued development
 
-I know that there has to be some way to make a more cleaner code.
+I know that there has to be some way to do a cleaner code.
 
 ## Author
 
